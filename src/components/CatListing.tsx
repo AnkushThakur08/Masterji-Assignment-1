@@ -1,10 +1,9 @@
-import React from "react";
-
+import React from "react"
 
 const CatListing = () => {
     return (
         <div>
-            <h1>Cat Page</h1>
+            <h1>CAT Listing Jokes</h1>
         </div>
     )
 }

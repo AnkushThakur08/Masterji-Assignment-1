@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CatListing from "./components/CatListing";
-import RandomJokes from "./components/RandomJokes";
 import RandomUser from "./components/RandomUser";
+import RandomJokes from "./components/RandomJokes";
+import CatListing from "./components/CatListing";
 import PageNotFound from "./components/PageNotFound";
 
 
 const App = () => {
-  return  (
+  return(
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<RandomUser />} / >
@@ -20,6 +20,7 @@ const App = () => {
     </Routes>
     
     </BrowserRouter>
+
   )
 }
 

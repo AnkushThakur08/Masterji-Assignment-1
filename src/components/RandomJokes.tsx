@@ -1,10 +1,10 @@
-import React from "react";
+import React from "react"
 
 
 const RandomJokes = () => {
     return (
         <div>
-            <h1>Jokes Page</h1>
+            <h1>Random Jokes</h1>
         </div>
     )
 }
