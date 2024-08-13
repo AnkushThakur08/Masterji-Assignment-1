@@ -15,6 +15,7 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
+     
     },
     extend: {
       keyframes: {
@@ -31,6 +32,10 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        donegal: ['"Donegal One"', "DM sans", "sans-serif"],
+        dm:["DM Sans", "sans-serif" ]
+     },
     },
   },
   plugins: [require("tailwindcss-animate")],
