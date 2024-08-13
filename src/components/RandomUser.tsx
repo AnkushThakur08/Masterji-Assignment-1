@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useCallback, useEffect, useState } from "react"
 import axios from "axios"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "./ui/card";
 import RefershIcon from "../assets/svg/refreshIcon";
@@ -26,80 +26,87 @@ const RandomUser: React.FC = () => {
     useEffect(() => {
         getData()
     }, [])
+
+    const handleNextUser = useCallback(() => {
+        getData();
+    }, [])
+
+    const handleCallMe = useCallback(() => {
+        window.location.href = `tel: ${jokes?.data?.phone}`
+    }, [])
     return (
         <div className="flex items-center justify-center min-h-screen bg-black">
             <Card className="w-[550px] p-8 bg-[#B6B3F3] rounded-2xl border-[12px] border-white">
                 {/* Card Upper Header */}
                 <div className="flex justify-between">
-                    <BackIcon />
+                    <BackIcon className="cursor-pointer" onClick={handleNextUser} />
                     <p>Profile Overview</p>
-                    <RefershIcon />
+                    <RefershIcon className="cursor-pointer" onClick={handleNextUser} />
                 </div>
 
                 <CardHeader className="items-center">
-                    <Avatar className="h-20 w-20">
-                        <AvatarImage className="" src={jokes?.data?.picture?.thumbnail ?? "-"} />
+                    <Avatar>
+                        <AvatarImage src={jokes?.data?.picture?.thumbnail ?? "-"} />
                         <AvatarFallback>CN</AvatarFallback>
                     </Avatar>
                 </CardHeader>
 
                 <CardContent className="text-center">
-                    <p>{jokes?.data?.name?.title} {" "} {jokes?.data?.name?.first} {" "} {jokes?.data?.name?.last}</p>
-                    <p>{jokes?.data?.login?.username ?? "-"}</p>
-                    <Separator />
+                    <p className="font-donegal text-2xl leading-8 font-normal mb-4">{jokes?.data?.name?.title} {" "} {jokes?.data?.name?.first} {" "} {jokes?.data?.name?.last}</p>
+                    <p className="font-dm mb-4">{jokes?.data?.login?.username ?? "-"}</p>
+                    <Separator className="bg-black opacity-20" />
                     <div className="flex justify-center gap-10 my-4">
-                        <div className="flex justify-center gap-2">
-                            <div className="bg-black rounded-full w-7 h-7 grid place-items-center">
+                        <div className="flex justify-center gap-2 items-center">
+                            <div className="bg-black rounded-full w-8 h-8 grid place-items-center">
                                 <LocationIcon />
                             </div>
                             <p>Location</p>
 
                         </div>
 
-                        <div className="flex justify-center gap-2">
-                            <div className="bg-black rounded-full w-7 h-7 grid place-items-center">
+                        <div className="flex justify-center gap-2 cursor-pointer items-center" onClick={handleCallMe}>
+                            <div className="bg-black rounded-full w-8 h-8 grid place-items-center">
                                 <CallMeIcon />
                             </div>
                             <p>Call Me</p>
                         </div>
                     </div>
-                    <Separator />
+                    <Separator className="bg-black opacity-20" />
+                </CardContent>
 
-                    <div className="grid grid-cols-2">
+                <CardFooter className="flex justify-between">
+                    <div className="grid grid-cols-2 w-full">
                         <div>
-                            <p>City</p>
+                            <p className="font-dm text-xs">City</p>
                             <p>{jokes?.data?.location.city ?? "-"}</p>
                         </div>
 
                         <div>
-                            <p>Nationality</p>
+                            <p className="font-dm text-xs">Nationality</p>
                             <p>{jokes?.data?.location.country ?? "-"}</p>
                         </div>
 
                         <div>
-                            <p>Date of birth</p>
-                            <p>{jokes?.data?.dob?.date ? format(new Date(jokes?.data?.dob?.date), 'dd, MMMM, yyyy') :"-"}</p>
+                            <p className="font-dm text-xs">Date of birth</p>
+                            <p>{jokes?.data?.dob?.date ? format(new Date(jokes?.data?.dob?.date), 'dd, MMMM, yyyy') : "-"}</p>
                         </div>
 
                         <div>
-                            <p>Phone Number</p>
+                            <p className="font-dm text-xs">Phone Number</p>
                             <p>{jokes?.data?.phone ?? "-"}</p>
                         </div>
 
                         <div>
-                            <p>Time Zone</p>
+                            <p className="font-dm text-xs">Time Zone</p>
                             <p>{jokes?.data?.location?.timezone?.offset ?? "-"}</p>
                             <span>{jokes?.data?.location?.timezone?.description ?? "-"}</span>
                         </div>
 
                         <div>
-                            <p>Registered Since</p>
-                            <p>{jokes?.data?.registered?.date ? format(new Date(jokes?.data?.registered?.date), 'dd, MMMM, yyyy') :"-"}</p>
+                            <p className="font-dm text-xs">Registered Since</p>
+                            <p>{jokes?.data?.registered?.date ? format(new Date(jokes?.data?.registered?.date), 'dd, MMMM, yyyy') : "-"}</p>
                         </div>
                     </div>
-                </CardContent>
-
-                <CardFooter className="flex justify-between">
                 </CardFooter>
             </Card>
         </div>
