@@ -1,5 +1,4 @@
 import { SVGProps } from "react";
-
 const BackIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width={18}
