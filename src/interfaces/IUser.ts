@@ -1,4 +1,4 @@
-export interface  IUser   {
+export interface  IUserObject   {
     gender: string;
     name: IUserName;
     location: ILocation;
