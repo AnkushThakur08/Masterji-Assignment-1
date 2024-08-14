@@ -1,14 +1,13 @@
 import React from "react";
-import { IUser } from "../RandomUser";
 import { format } from 'date-fns';
-
+import { IUser } from "../UserCard";
 
 interface IFooterProps {
     user: IUser
 }
 
 
-const Footer: React.FC<IFooterProps> = ({user}) => {
+const Footer: React.FC<IFooterProps> = ({ user }) => {
     return (
         <div className="grid grid-cols-2 gap-4 gap-x-32">
             <div>
@@ -33,8 +32,10 @@ const Footer: React.FC<IFooterProps> = ({user}) => {
 
             <div>
                 <p className="font-dm text-xs leading-3">Time Zone</p>
-                <p className="font-sans text-xl font-normal opacity-70 ">{user?.data?.location?.timezone?.offset ?? "-"}</p>
-                <span>{user?.data?.location?.timezone?.description ?? "-"}</span>
+                <p className="font-sans text-xl font-normal opacity-70">
+                    {user?.data?.location?.timezone?.offset ?? "-"}
+                    {user?.data?.location?.timezone?.description ? ` - ${user?.data?.location?.timezone?.description}` : ""}
+                </p>
             </div>
 
             <div>
@@ -42,7 +43,6 @@ const Footer: React.FC<IFooterProps> = ({user}) => {
                 <p className="font-sans text-xl font-normal opacity-70 ">{user?.data?.registered?.date ? format(new Date(user?.data?.registered?.date), 'dd, MMMM, yyyy') : "-"}</p>
             </div>
         </div>
-
     )
 }
 
