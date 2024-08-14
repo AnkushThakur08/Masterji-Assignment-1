@@ -1,16 +1,12 @@
 import React, {useEffect, useState } from "react"
 import axios from "axios"
-import { Card, CardHeader, CardContent, CardFooter } from "./ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { IUserObject } from "../interfaces/IUser";
+import { Card, CardHeader, CardContent, CardFooter } from "../ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { IUser } from "../../interfaces/IUser";
 import Footer from "./card/Footer";
 import Content from "./card/Content";
 import Title from "./card/Title";
 import FooterTile from "./card/FooterTile";
-
-export interface IUser {
-    data: IUserObject
-}
 
 const UserCard: React.FC = () => {
     const [user, setUser] = useState<IUser>()

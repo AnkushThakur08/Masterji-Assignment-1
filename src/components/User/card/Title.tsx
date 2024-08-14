@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
-import BackIcon from "../../assets/svg/BackIcon";
-import RefershIcon from "../../assets/svg/refreshIcon";
+import BackIcon from "../../../assets/svg/BackIcon";
+import RefershIcon from "../../../assets/svg/refreshIcon";
 
 interface ITitleProps {
     getData: () => void;

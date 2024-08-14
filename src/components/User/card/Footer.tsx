@@ -1,6 +1,6 @@
 import React from "react";
 import { format } from 'date-fns';
-import { IUser } from "../UserCard";
+import { IUser } from "../../../interfaces/IUser";
 
 interface IFooterProps {
     user: IUser

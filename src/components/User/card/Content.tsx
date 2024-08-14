@@ -1,8 +1,8 @@
 import React, { useCallback } from "react"
-import { IUser } from "../UserCard"
-import { Separator } from "../ui/separator"
-import LocationIcon from "../../assets/svg/LocationIcon"
-import CallMeIcon from "../../assets/svg/CallMeIcon"
+import { Separator } from "../../ui/separator"
+import LocationIcon from "../../../assets/svg/LocationIcon"
+import CallMeIcon from "../../../assets/svg/CallMeIcon"
+import { IUser } from "../../../interfaces/IUser"
 
 interface IContentProps {
     user: IUser

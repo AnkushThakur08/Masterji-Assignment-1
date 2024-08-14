@@ -1,3 +1,7 @@
+export interface IUser {
+    data: IUserObject
+}
+
 export interface  IUserObject   {
     gender: string;
     name: IUserName;

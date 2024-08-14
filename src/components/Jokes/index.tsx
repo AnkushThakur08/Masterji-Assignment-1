@@ -1,7 +1,7 @@
 import React from "react"
 
 
-const RandomJokes = () => {
+const Jokes:React.FC = () => {
     return (
         <div>
             <h1>Random Jokes</h1>
@@ -9,4 +9,4 @@ const RandomJokes = () => {
     )
 }
 
-export default RandomJokes
+export default Jokes
