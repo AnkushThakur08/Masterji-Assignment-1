@@ -36,6 +36,7 @@ module.exports = {
         donegal: ['"Donegal One"', "DM sans", "sans-serif"],
         dm:["DM Sans", "sans-serif" ],
         sans: ["DM Serif Text", "sans-serif"],
+        inter: ["Inter", "sans-serif"]
      },
     },
   },
