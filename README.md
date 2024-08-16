@@ -1,50 +1,23 @@
-# React + TypeScript + Vite
+# Master JI Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This Assignment includes 3 Tasks:
+- Random User Profile
+- Random Jokes Tweet
+- Cats Listing
 
-Currently, two official plugins are available:
+### All 3 task are listing on different routes which are:
+- "/random-user" - for Random user
+- "/random-jokes" - for Random Jokes
+- "/cats-listing" - for Cat Listing Page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Here are the Images
 
-## Expanding the ESLint configuration
+# Task 1
+![User]("../../public/project_screenshot/user.png")
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Task 2
+![Jokes]("../../public/project_screenshot/jokes-photo.png")
 
-- Configure the top-level `parserOptions` property like this:
+# Task 3
+![cat]("../../public/project_screenshot/cat-photo.png") 
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
