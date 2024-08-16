@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import RandomJokes from "./components/Jokes";
+import RandomJokes from "./components/jokes";
 import CatListing from "./components/CatListing";
 import PageNotFound from "./components/PageNotFound";
-import UserCard from "./components/User";
+import UserCard from "./components/user";
 
 
 const App = () => {
