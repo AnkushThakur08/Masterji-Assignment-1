@@ -1,6 +1,7 @@
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 import { Card, CardContent, CardFooter, CardHeader } from "../ui/card"
+import { Link } from "react-router-dom";
 import Title from "./card/Title"
 import Header from "./card/Header";
 import Content from "./card/Content";
@@ -39,7 +40,9 @@ const Jokes: React.FC = () => {
             </div>
 
             <div className="flex justify-end  mx-4">
-                <Logo />
+                <Link to="https://chaicode.com/">
+                    <Logo />
+                </Link>
             </div>
         </>
     )
