@@ -1,5 +1,9 @@
 # Master JI Assignment
 
+![](https://img.shields.io/badge/Assignment%201-Ankush_Thakur-yellow)
+
+![](https://img.shields.io/badge/VITE_APP-React%20App-blue)
+
 This Assignment includes 3 Tasks:
 - Random User Profile
 - Random Jokes Tweet
@@ -13,11 +17,13 @@ This Assignment includes 3 Tasks:
 ### Here are the Images
 
 # Task 1
-![User]("../../public/project_screenshot/user.png")
+![User](./public/project_screenshot/user.png)
 
 # Task 2
-![Jokes]("../../public/project_screenshot/jokes-photo.png")
+![Jokes](./public/project_screenshot/jokes-photo.png)
 
 # Task 3
-![cat]("../../public/project_screenshot/cat-photo.png") 
+![cat](./public/project_screenshot/cat-photo.png) 
 
+### live site deployed link
+ [click here](https://main--ankush-assignment.netlify.app/)
