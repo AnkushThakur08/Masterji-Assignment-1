@@ -26,7 +26,7 @@ const Cat: React.FC = () => {
                     <Logo />
                 </Link>
             </div>
-            <div className="flex justify-around gap-6 my-20">
+            <div className="flex justify-around gap-6 my-20 mx-6">
                 {cats && cats?.length >= 1 ?
                     cats.map((cat) => {
                         return (
